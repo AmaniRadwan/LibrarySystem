@@ -1,31 +1,46 @@
 <!DOCTYPE html>
+
 <html>
     <head>
-        
         <link rel="stylesheet" href = style.css>
         <title>Library Information System</title>
-        <ul>
-        <li><h1>Library Information System</h1></li>       
-  <li><a href="main.html">Main</a></li>
-  <li><a href="register.html">Register</a></li>
-  <li><a href="login.html">Login</a></li>
-  <li><a href="cart.html">Shopping Cart</a></li>
-</ul>
     </head>
+
     <body>
+        <header>
+            <h1>Library Information Systrm</h1>
+        </header>
+
         <form name="registration" action ="registe.jsp" method="post">
-            <table id="t"> 
-                <tr>
-                    <tr>
-                    <td>Name</td></tr>
-                    <tr></tr><td><input type="text" name = "name"></td></tr>
-                     <tr><td>Username</td></tr>
-                    <tr></tr><td><input type="text" name = "username"></td></tr>
-                   <tr> <td>Password</td></tr>
-                    <td><input type="password" name = "password"></td></tr></tr>
-                   <tr> <td><input type="submit" name = "saveB" value="Register"></td></tr>
-                </tr>
-            </table>
+            <table id="t" >
+    <tr><td>Name</td></tr>
+    <tr><td><input type="text" name = "name"></td></tr>
+    <tr><td>Username</td></tr>
+    <tr><td><input type="text" name = "username"></td></tr>
+                <tr><td>Password</td></tr>
+    <tr><td><input type="password" name = "password"></td></tr>
+    <tr>
+        <td class="center-content">
+            <a href="main.html">
+    <button type="button" name="saveB">Register</button>
+</a>
+        </td>
+    </tr>
+    <tr><td class="center-content">Already a member?</td></tr>
+    <tr>
+        <td class="center-content">
+        <a href="login.html">
+    <button type="button" name="loginn">Login</button>
+</a>
+        </td>
+    </tr>
+</table>
         </form>
+        <footer>
+            <p>&copy; 2025 Library Information System</p>
+            <p>Made by Hind and Amani</p>
+        </footer>
+
     </body>
+
 </html>
