@@ -1,9 +1,42 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    flex-grow: 1;
+    margin-bottom: auto;
+}
+main {
+    flex-grow: 1;
+    width: 80%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.right-nav {
+    float: right;
+}
+
+.right-nav a {
+
+    display: block;
+    color: white;
+    padding: 33px 16px; 
+    text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 2;
+  padding: 2px;
   overflow: hidden;
   background-color: #694F08;
+ font-family: "Times New Roman", Times, serif;
 }
 
 ul li {
@@ -16,7 +49,7 @@ ul li {
 ul li a {
   display: block;
   color: white;
-  text-align: right;
+  text-align: center;
   padding: 33px 16px;
   text-decoration: none;
     justify-content: center;
@@ -36,8 +69,21 @@ h1{
   width: 100px;
 }
 
-.cart{
-  text-align: left;
+.cart {
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+    
+    background-color: #aa7004a4;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.cart h2, .cart h4 {
+    color: white; 
 }
 
 /*end of navigation panel */
@@ -74,17 +120,20 @@ div.gallery-item div.desc {
   text-align: center;
 }
 
-input[type=button], input[type=submit], input[type=reset] {
-  background-color: #aa7004;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 25px;
-  font-weight: bold;
-  font-family: "Times New Roman", Times, serif;
+button,
+input[type=button], 
+input[type=submit], 
+input[type=reset] {
+    background-color: #aa7004;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
 }
 
 table {
@@ -101,8 +150,36 @@ background-color: #aa7004a4;
   
 }
 
-
-
 h3{
   text-align: left;
+}
+
+header {
+    display: flex; 
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    color: rgb(255,255,255);
+    padding-bottom: 10px;
+    background-color: #694F08;
+    box-sizing: border-box;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    box-sizing: border-box;
+    background-color: #694F08; 
+    color: white;
+    padding: 20px 0; 
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
 }
