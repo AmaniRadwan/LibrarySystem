@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title id="page-title">Book Details</title>
+</head>
+<body>    
+    <header>
+        <nav>
+            <ul>
+                <li><h1 class="page-title">Library Information System</h1></li>
+                <li class="right-nav"><a href="login.html">Log out</a></li>
+                <li class="right-nav"><a href="cart.html">Shopping Cart</a></li>
+                <li class="right-nav"><a href="main.html">Back To Main</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content-wrapper">
+        
+        <div class="book-detail-card">
+            
+            <div class="book-image-area">
+                <img id="book-image" src="" alt="Book Cover" onerror="this.onerror=null; this.src='https://placehold.co/300x450/ccc/000?text=Image+Loading+Error';" />
+            </div>
+            
+            <div class="book-info-area">
+                <h2 id="book-title">Loading...</h2>
+                <p id="book-author" class="author"></p>
+                
+                <div class="section-divider"></div>
+                
+                <h3>Description</h3>
+                <p id="book-description" class="description">
+                    Loading book description...
+                </p>
+                
+                <div class="section-divider"></div>
+
+                <div class="purchase-options">
+                    <h3>Get the Book:</h3>
+                    
+                    <button type="button" class="action-button rent-btn">
+                        Rent (7 days) - $4.99
+                    </button>
+                    
+                    <button type="button" class="action-button purchase-btn">
+                        Purchase Ebook - $12.99
+                    </button>
+                    
+                    <button type="button" class="action-button audio-btn">
+                        Get Audio Version - $19.99
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Library Information System</p>
+        <p>Made by Hind and Amani</p>
+    </footer>
+    
+    <script>
+        const BOOK_DATA = [
+            { 
+                key: "metamorphosis", 
+                title: "The Metamorphisis", 
+                author: "Franz Kafka", 
+                image: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1697537541i/133350560.jpg", 
+                description: "The novella tells the story of salesman Gregor Samsa, who wakes up one morning to find himself transformed into a huge insect (vermin). He is forced to grapple with his new condition, the difficulties it presents to his family, and the profound meaninglessness of his life. This is considered one of the most significant works of fiction of the 20th century." 
+            },
+            { 
+                key: "peace-to-end-all-peace", 
+                title: "A Peace to End All Peace", 
+                author: "David Fromkin", 
+                image: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1429664334i/78107.jpg", 
+                description: "A sweeping, definitive history of the dramatic end of the Ottoman Empire and the creation of the modern Middle East." 
+            },
+            { 
+                key: "communist-manifesto", 
+                title: "The Communist Manifesto", 
+                author: "Karl Marx and Friedrich Engels", 
+                image: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1740105815i/30474.jpg", 
+                description: "A political pamphlet and landmark text outlining the goals and theory of Communism." 
+            },
+            { 
+                key: "cities-of-salt", 
+                title: "خماسية مدن الملح (Cities of Salt)", 
+                author: "Abdul Rahman Munif", 
+                image: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1332423478i/13556408.jpg", 
+                description: "The first novel in a celebrated quintet detailing the transformation of an Arabian Gulf society after the discovery of oil." 
+            },
+            { 
+                key: "crime-and-punishment", 
+                title: "Crime and Punishment", 
+                author: "Fyodor Dostoevsky", 
+                image: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1382846449i/7144.jpg", 
+                description: "A psychological drama following Raskolnikov, an impoverished former student in St. Petersburg, who formulates a plan to kill an unscrupulous pawnbroker for her money." 
+            },
+            { 
+                key: "the-stranger", 
+                title: "The Stranger", 
+                author: "Albert Camus", 
+                image: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1738704267i/49552.jpg", 
+                description: "Meursault, the protagonist, is an indifferent character who murders an Arab man and is condemned for his lack of emotion more than the crime itself, exploring themes of absurdity and existentialism." 
+            },
+            { 
+                key: "imperialism", 
+                title: "Imperialism: The Highest Stage of Capitalism", 
+                author: "V.I. Lenin", 
+                image: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1431981127i/179609.jpg", 
+                description: "Lenin's analysis of why advanced capitalist countries turn to imperialism, focusing on the role of monopoly finance capital." 
+            },
+            { 
+                key: "a-room-of-ones-own", 
+                title: "A Room of One’s Own", 
+                author: "Virginia Woolf", 
+                image: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1327883012i/18521.jpg", 
+                description: "Based on a series of lectures, Woolf argues that 'a woman must have money and a room of her own if she is to write fiction.'" 
+            },
+            { 
+                key: "jane-eyre", 
+                title: "Jane Eyre", 
+                author: "Charlotte Brontë", 
+                image: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1557343311i/10210.jpg", 
+                description: "An autobiographical novel that follows the experiences of its eponymous heroine, including her growth to adulthood and her love for Mr. Rochester." 
+            },
+            { 
+                key: "reform-or-revolution", 
+                title: "Reform or Revolution", 
+                author: "Rosa Luxemburg", 
+                image: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1390444889i/213519.jpg", 
+                description: "A classic polemic arguing that reforms can only be achieved by revolutionary means and that revolutionary class struggle is the only path to socialism." 
+            }
+        ];
+
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        function loadBookDetails() {
+            const bookKey = getQueryParam('book');
+            const book = BOOK_DATA.find(b => b.key === bookKey);
+
+            if (!book) {
+                document.getElementById('book-title').textContent = "Book Not Found";
+                document.getElementById('book-author').textContent = "";
+                document.getElementById('book-description').textContent = "The requested book details could not be found. Please return to the main gallery.";
+                document.getElementById('book-image').src = "https://placehold.co/300x450/ccc/000?text=Error";
+                document.title = "Book Not Found";
+                return;
+            }
+
+            document.getElementById('page-title').textContent = book.title;
+            document.getElementById('book-title').textContent = book.title;
+            document.getElementById('book-author').textContent = `by ${book.author}`;
+            document.getElementById('book-description').textContent = book.description;
+            document.getElementById('book-image').src = book.image;
+            document.getElementById('book-image').alt = `${book.title} cover`;
+        }
+
+        document.addEventListener('DOMContentLoaded', loadBookDetails);
+    </script>
+</body>
+</html>
