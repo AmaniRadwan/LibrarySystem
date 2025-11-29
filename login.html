@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href = style.css>
+        <link rel="stylesheet" href="style.css">
         <title>Library Information System</title>
-         <ul>
-         <li><h1>Library Information System</h1></li>
-         <li><a href="main.html">Main</a></li>
-         <li><a href="register.html">Register</a></li>
-         <li><a href="login.html">Login</a></li>
-         <li><a href="cart.html">Shopping Cart</a></li>
-         </ul>
-    </head>
+        </head>
     <body>
-        <form name="login" action ="login" method="post">
-            <table> 
-                <tr>
-                    <h3 >Welcome back!</h3>
+        
+        <header>
+            <h1 class="centered-text">Library Information System</h1>
+        </header>
+        <main id="center-container">
+                        
+            <form name="login" action="login" method="post">
+                <table id="t">
                     <tr><td>Username</td></tr>
-                    <tr><td><input type="text" name = "username"></td></tr>
+                    <tr><td><input type="text" name="username"></td></tr>
                     <tr><td>Password</td></tr>
-                    <tr><td><input type="password" name = "password"></td></tr>
-                    <tr><td><input type="submit" name = "saveB" value="Login"></td></tr>
-                </tr>
-            </table>
-        </form>
-    </body>
+                    <tr><td><input type="password" name="password"></td></tr>
+                    <tr>
+                        <td class="center-content">
+                            <a href="main.html">
+                            <button type="button">Login</button>
+                            </a>
+                        </td>
+                    </tr>
+                    
+                    <tr><td class="center-content">New member?</td></tr>
+                    <tr>
+                        <td class="center-content">
+                            <a href="register.html">
+                                <button type="button">Register</button>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Library Information System</p>
+            <p>Made by Hind and Amani</p>
+        </footer>
+        </body>
 </html>
